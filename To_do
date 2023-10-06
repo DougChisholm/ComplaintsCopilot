@@ -1,0 +1,13 @@
+* Simple text box button label app to get a response from Cog Search 
+
+
+=======
+
+* Azure key vault
+* IaC to spin up the appservice and then deploy the code all via CICD?
+
+=-=-=-=-
+
+Questions:
+
+* ADO or GH? GH first then see if I can create boards in ADO
