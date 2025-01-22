@@ -1,6 +1,13 @@
-﻿<Router AppAssembly="@typeof(App).Assembly">
+﻿@using Microsoft.AspNetCore.Components.Web
+
+<Router AppAssembly="@typeof(App).Assembly">
     <Found Context="routeData">
-        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+        <MediaQuery MinWidth="641px">
+            <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+        </MediaQuery>
+        <MediaQuery MaxWidth="640px">
+            <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayoutMobile)" />
+        </MediaQuery>
         <FocusOnNavigate RouteData="@routeData" Selector="h1" />
     </Found>
     <NotFound>
