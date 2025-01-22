@@ -1,0 +1,29 @@
+@inherits LayoutComponentBase
+
+<PageTitle>Complaints app - Mobile</PageTitle>
+
+<div class="mobile-page">
+    <div class="top-bar">
+        <button class="menu-button" @onclick="ToggleNavMenu">☰</button>
+        <span class="app-title">Complaints App</span>
+    </div>
+
+    <div class="mobile-sidebar @NavMenuCssClass">
+        <NavMenu />
+    </div>
+
+    <main>
+        @Body
+    </main>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}
